@@ -57,6 +57,11 @@
     </style>
    </head>
    <body>
+      <!-- Add a button to toggle visibility -->
+    <button id="showContentButton">Show Content</button>
+
+    <!-- Original content that you want to show/hide -->
+    <div class="original-content">
 
       <!-- partial:index.partial.html -->
       <div class="sakura-falling"></div>
@@ -105,7 +110,9 @@
 </div>
 
       <p class="happiness">Join us in our happiness!<br><a href="https://twitter.com/chetan_guptaa" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></p>
-      <!-- partial -->
+    </div>
+       
+       <!-- partial -->
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
       <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
       <script  src="./js/script.js"></script>
@@ -134,7 +141,19 @@
         video.addEventListener('play', function() {
             audio.pause();
         });
+
+                   
+        // Function to show/hide the original content
+        function toggleContent() {
+            var originalContent = document.querySelector('.original-content');
+            originalContent.style.display = (originalContent.style.display === 'none') ? 'block' : 'none';
+        }
+
+        // Add click event listener to the button
+        document.getElementById('showContentButton').addEventListener('click', toggleContent);
+    
 </script>
+    
    </body>
 <!---
    _____                     __  __            ____        __     
