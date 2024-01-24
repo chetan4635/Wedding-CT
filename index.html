@@ -57,6 +57,28 @@
         display: block;
         margin: 0 auto; /* Center the logo */
     }
+    /* ... (existing styles) ... */
+
+    .venue {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        margin-top: 20px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+
+    .location-logo {
+        max-width: 20px; /* Adjust the maximum width as needed */
+        height: auto;
+        margin-right: 10px; /* Adjust the margin as needed */
+        vertical-align: middle;
+    }
     </style>
    </head>
    <body>
@@ -96,10 +118,14 @@
       </p>
       <div class="actions">
         <a href="https://maps.app.goo.gl/5bBtCB4w8zWVKo526" target="_blank">
-          <div class="venue">SEE THE VENUE</div>
+            <div class="venue">
+                <img src="D:/downloads/11072022/Downloads/location.png" alt="Location Logo" class="location-logo">
+                SEE THE VENUE
+            </div>
         </a>
         <a href="invitation/Gupta_family_Wedding_Invitation.pdf" download="Gupta_Family_Invitation | Hope to see you there!">
-          <div class="venue">DOWNLOAD INVITATION CARD</div>
+          <div class="venue">
+            <img src="D:/downloads/11072022/Downloads/download.png" alt="Location Logo" class="location-logo">DOWNLOAD INVITATION CARD</div>
         </a>
       </div>
       <p class="footer">
@@ -159,6 +185,7 @@
             pauseMusic();
         }
     });
+    
 </script>
    </body>
 <!---
