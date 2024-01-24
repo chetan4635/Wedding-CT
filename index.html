@@ -58,7 +58,7 @@
             <h1>Chetan </h1>
             <h2>&</h2>
             <h1>Teena</h1>
-            <h3>Are getting married</h3>
+            <h3>Are Tying the knot</h3>
             <p>
                on <span class="date">31st January 2024</span></29>, At <span class="place">Yashoda Palace</span> Kota                
             </p>
@@ -114,16 +114,34 @@
         audio.src = songs[randomIndex];
         audio.play();
     }
+    // Function to pause the music
+    function pauseMusic() {
+        var audio = document.getElementById('my_audio');
+        audio.pause();
+    }
 
     // Call the function to play a random song when the page loads
     playRandomSong();
          // Pause audio when video is played
         var video = document.getElementById('myVideo');
         var audio = document.getElementById('my_audio');
+        var isVideoPlaying = false;
 
         video.addEventListener('play', function() {
-            audio.pause();
-        });
+        pauseMusic();
+        isVideoPlaying = true;
+    });
+
+    video.addEventListener('pause', function() {
+        isVideoPlaying = false;
+    });
+
+    // Pause audio when user interacts with the page
+    document.addEventListener('click', function() {
+        if (isVideoPlaying) {
+            pauseMusic();
+        }
+    });
 </script>
    </body>
 <!---
